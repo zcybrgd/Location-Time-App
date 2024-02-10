@@ -19,16 +19,7 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.orangeAccent,
       ),
       body: Center(
-        child: Text(
-          'This Is A Flutter Bootcamp',
-          style: TextStyle(
-              fontSize: 24.0,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 2.0,
-              color: Colors.purple[500],
-              fontFamily: 'Outfit'
-          ),
-        ),
+      child: Image.asset('assets/img.jpg')
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
