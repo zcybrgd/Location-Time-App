@@ -18,8 +18,15 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.orangeAccent,
       ),
-      body: Center(
-      child: Image.asset('assets/img.jpg')
+      body: Container(
+        // apply 20 px of padding around all edges
+        //padding: EdgeInsets.all(20.0),
+        padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
+       // padding: EdgeInsets.fromLTRB(10.0, 20.0, 30.0, 40.0),
+        margin: EdgeInsets.all(50.0),
+        color: Colors.indigo,
+        // there is a padding widget
+        child: Text('when you know you know'),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
