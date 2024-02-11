@@ -6,9 +6,16 @@ void main() => runApp(MaterialApp(
   home: Home()
 ));
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({super.key});
 
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  // define data to be changed
+  int celebAge = 0;
   @override
   Widget build(BuildContext context) {
     // make a quick layout
@@ -16,8 +23,16 @@ class Home extends StatelessWidget {
       appBar: AppBar(
           title: Text('Celebrity Card'),
           centerTitle: true,
-          backgroundColor: Colors.purple,
+          backgroundColor: Colors.purple[200],
         ),
+      floatingActionButton: FloatingActionButton(
+          onPressed: (){
+            setState(() {
+              celebAge += 1;
+            });
+          },
+          child: Icon(Icons.add),
+          backgroundColor: Colors.purple[200],),
       body: Padding(
         padding: EdgeInsets.fromLTRB(40.0, 60.0, 40.0, 10.0),
         child: Column(
@@ -69,6 +84,24 @@ class Home extends StatelessWidget {
               ),
             ),
             SizedBox(height: 40.0,),
+            Text(
+              'Age',
+              style: TextStyle(
+                fontFamily: 'Outfit',
+                letterSpacing: 1.5,
+              ),
+            ),
+            SizedBox(height: 10.0,),
+            Text(
+              '$celebAge',
+              style: TextStyle(
+                  fontFamily: 'Outfit',
+                  letterSpacing: 1.5,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 17.0
+              ),
+            ),
+            SizedBox(height: 40.0,),
             Row(
               children: <Widget>[
                 Icon(
@@ -92,6 +125,8 @@ class Home extends StatelessWidget {
     );
   }
 }
+
+
 
 /*
 class Home extends StatelessWidget {
