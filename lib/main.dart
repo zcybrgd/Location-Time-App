@@ -9,6 +9,53 @@ void main() => runApp(MaterialApp(
 
 class Home extends StatelessWidget {
   const Home({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Location Time App'),
+        centerTitle: true,
+        backgroundColor: Colors.orangeAccent,
+      ),
+      // a row is a widget
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: <Widget>[
+          Text('This is one of the children of the row'),
+          FloatingActionButton(
+            onPressed: () {},
+            backgroundColor: Colors.cyan,
+            child: Text('pick me') ,
+          ),
+          Container(
+              color: Colors.greenAccent,
+              padding: EdgeInsets.all(30.0)
+          )
+        ],
+      )
+      /*Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text('This is one of the children of the row'),
+          FloatingActionButton(
+              onPressed: () {},
+              backgroundColor: Colors.cyan,
+              child: Text('pick me') ,
+          ),
+          Container(
+            color: Colors.greenAccent,
+            padding: EdgeInsets.all(30.0)
+          )
+        ],
+      ),*/
+    );
+  }
+}
+/*
+class Home extends StatelessWidget {
+  const Home({super.key});
   // the hot reload to not to re-build the whole app, just where the code changed
   @override
   Widget build(BuildContext context) {
@@ -36,3 +83,5 @@ class Home extends StatelessWidget {
     );
   }
 }
+*/
+
