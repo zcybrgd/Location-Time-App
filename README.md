@@ -2,6 +2,7 @@
 
 my first flutter dir, to learn the basics of flutter to mastery
 
+several commits contain just my dummy code while discovering several concepts of flutter
 ## Getting Started
 
 This project is a starting point for a Flutter application.

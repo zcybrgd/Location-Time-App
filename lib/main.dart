@@ -1,11 +1,77 @@
 import 'package:flutter/material.dart';
-
+import 'quote.dart';
 // that widget will allow us to use google material design features, its a wrapper [the root] of the rest of our widgets inside the app
 void main() => runApp(MaterialApp(
   // to determine what s gonna displayed on the homescreen for our app
   home: Home()
 ));
 
+
+class Home extends StatefulWidget {
+  const Home({super.key});
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  List<Quote> quotes = [
+    Quote('the only excuse for making a useless thing is that one admires it intensely', 'Oscar Wilde'),
+    Quote( 'I have simply worshipped pianists -- 2 at a time', 'Oscar Wilde'),
+    Quote('A grande passion is the privilege of people who have nothing to do', 'Oscar Wilde')
+
+  ];
+   Widget quoteTemplate(quote){
+     return Card(
+       margin: EdgeInsets.symmetric(horizontal: 15.0, vertical: 15.0),
+       child: Padding(
+         padding: const EdgeInsets.all(11.0),
+         child: Column(
+           crossAxisAlignment: CrossAxisAlignment.stretch,
+           children: <Widget>[
+             Text(
+               quote.text,
+               style: TextStyle(
+                 fontSize: 15.0
+               ),
+             ),
+             SizedBox(height: 6.0,),
+             Text(
+               quote.author,
+               style: TextStyle(
+                   fontSize: 15.0
+               ),)
+           ],
+         ),
+       ),
+     );
+   }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[200],
+      appBar: AppBar(
+        title: Text('Dorian Gray Quotes',
+        style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.white
+        ),),
+        centerTitle: true,
+        backgroundColor: Colors.redAccent,
+      ),
+      body: Column(
+        children: quotes.map((quo) {
+          return quoteTemplate(quo);
+        }).toList(),
+      ),
+    );
+  }
+}
+
+
+
+
+/*
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -128,7 +194,7 @@ class _HomeState extends State<Home> {
 
 
 
-/*
+
 class Home extends StatelessWidget {
   const Home({super.key});
 
