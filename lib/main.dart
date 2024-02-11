@@ -22,29 +22,7 @@ class _HomeState extends State<Home> {
 
   ];
    Widget quoteTemplate(quote){
-     return Card(
-       margin: EdgeInsets.symmetric(horizontal: 15.0, vertical: 15.0),
-       child: Padding(
-         padding: const EdgeInsets.all(11.0),
-         child: Column(
-           crossAxisAlignment: CrossAxisAlignment.stretch,
-           children: <Widget>[
-             Text(
-               quote.text,
-               style: TextStyle(
-                 fontSize: 15.0
-               ),
-             ),
-             SizedBox(height: 6.0,),
-             Text(
-               quote.author,
-               style: TextStyle(
-                   fontSize: 15.0
-               ),)
-           ],
-         ),
-       ),
-     );
+     return QuoteCard(quote);
    }
   @override
   Widget build(BuildContext context) {
@@ -63,6 +41,38 @@ class _HomeState extends State<Home> {
         children: quotes.map((quo) {
           return quoteTemplate(quo);
         }).toList(),
+      ),
+    );
+  }
+}
+
+class QuoteCard extends StatelessWidget {
+  final Quote quote;
+  QuoteCard(this.quote);
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      margin: EdgeInsets.symmetric(horizontal: 15.0, vertical: 15.0),
+      child: Padding(
+        padding: const EdgeInsets.all(11.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Text(
+              quote.text,
+              style: TextStyle(
+                fontSize: 15.0
+              ),
+            ),
+            SizedBox(height: 6.0,),
+            Text(
+              quote.author,
+              style: TextStyle(
+                  fontSize: 15.0
+              ),)
+          ],
+        ),
       ),
     );
   }
