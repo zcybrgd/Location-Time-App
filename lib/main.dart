@@ -2,10 +2,98 @@ import 'package:flutter/material.dart';
 
 // that widget will allow us to use google material design features, its a wrapper [the root] of the rest of our widgets inside the app
 void main() => runApp(MaterialApp(
-  // propreties
+  // to determine what s gonna displayed on the homescreen for our app
   home: Home()
 ));
 
+class Home extends StatelessWidget {
+  const Home({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    // make a quick layout
+    return Scaffold(
+      appBar: AppBar(
+          title: Text('Celebrity Card'),
+          centerTitle: true,
+          backgroundColor: Colors.purple,
+        ),
+      body: Padding(
+        padding: EdgeInsets.fromLTRB(40.0, 60.0, 40.0, 10.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Center(
+              child: CircleAvatar(
+                backgroundImage: NetworkImage('https://upload.wikimedia.org/wikipedia/en/d/d5/Taylor_Swift_-_1989_%28Taylor%27s_Version%29.png'),
+                radius: 70.0,
+              ),
+            ),
+            Divider(
+              height: 60.0,
+              color: Colors.purple,
+            ),
+            Text(
+              'Full Name',
+              style: TextStyle(
+                fontFamily: 'Outfit',
+                letterSpacing: 1.5,
+              ),
+            ),
+            SizedBox(height: 10.0,),
+            Text(
+              'Taylor Swift',
+              style: TextStyle(
+                fontFamily: 'Outfit',
+                letterSpacing: 1.5,
+                fontWeight: FontWeight.bold,
+                fontSize: 17.0
+              ),
+            ),
+            SizedBox(height: 40.0,),
+            Text(
+              'Next Album',
+              style: TextStyle(
+                fontFamily: 'Outfit',
+                letterSpacing: 1.5,
+              ),
+            ),
+            SizedBox(height: 10.0,),
+            Text(
+              'The Tortured Poets Departement',
+              style: TextStyle(
+                  fontFamily: 'Outfit',
+                  letterSpacing: 1.5,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 17.0
+              ),
+            ),
+            SizedBox(height: 40.0,),
+            Row(
+              children: <Widget>[
+                Icon(
+                  Icons.email,
+                  color: Colors.purple[200],
+                ),
+                SizedBox(width: 20.0,),
+                Text('alisonswift@gmail.uk',
+                style: TextStyle(
+                  fontFamily: 'Outfit',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15.0,
+                ),
+                )
+              ],
+            )
+          ],
+        ),
+      ),
+
+    );
+  }
+}
+
+/*
 class Home extends StatelessWidget {
   const Home({super.key});
 
@@ -42,7 +130,6 @@ class Home extends StatelessWidget {
   }
 }
 
-/*
 class Home extends StatelessWidget {
   const Home({super.key});
 
