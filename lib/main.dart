@@ -6,7 +6,43 @@ void main() => runApp(MaterialApp(
   home: Home()
 ));
 
+class Home extends StatelessWidget {
+  const Home({super.key});
 
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(appBar: AppBar(
+      title: Text('Location Time App'),
+      centerTitle: true,
+      backgroundColor: Colors.orangeAccent,
+    ),
+      body: Row(
+        children: <Widget>[
+          Expanded(child: Image.asset('assets/img.jpg')),
+          Expanded(
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.deepOrange,
+              child: Text('1'),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(30.0),
+            color: Colors.orangeAccent,
+            child: Text('2'),
+          ),
+          Container(
+            padding: EdgeInsets.all(30.0),
+            color: Colors.orange,
+            child: Text('3'),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/*
 class Home extends StatelessWidget {
   const Home({super.key});
 
@@ -34,7 +70,7 @@ class Home extends StatelessWidget {
           )
         ],
       )
-      /*Row(
+      Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -49,10 +85,10 @@ class Home extends StatelessWidget {
             padding: EdgeInsets.all(30.0)
           )
         ],
-      ),*/
+      ),
     );
   }
-}
+}*/
 /*
 class Home extends StatelessWidget {
   const Home({super.key});
