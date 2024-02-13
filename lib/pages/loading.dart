@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
+import 'package:flutterprojects/services/world_time.dart';
 
 
 class Loading extends StatefulWidget {
@@ -10,11 +10,10 @@ class Loading extends StatefulWidget {
 }
 
 class _LoadingState extends State<Loading> {
-
-  void getData() async {
-
-    Response response = await get(Uri.parse('https://jsonplaceholder.typicode.com/todos/1'));
-    print(response.body);
+  void setUpWorldTime () async {
+    WorldTime instance = WorldTime(location: 'london', flag: 'london.png', url: 'Europe/London');
+    await instance.getTime();
+    print(instance.time);
   }
 
   //runs first when the state object is created
@@ -22,7 +21,7 @@ class _LoadingState extends State<Loading> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    getData();
+    setUpWorldTime();
   }
 
   @override
