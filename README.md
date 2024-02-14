@@ -1,17 +1,13 @@
-# flutterprojects
+# Location && Time
 
-my first flutter dir, to learn the basics of flutter to mastery
+first flutter app, to learn the basics of flutter 
 
 several commits contain just my dummy code while discovering several concepts of flutter
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- learnt about different kind of widgets, propreties etc..
+- manipulation of assets, icons, changing styling things like fonts and colors etc..
+- learnt dart ofc
+- Maps and routing throughout the app
+- integrating spinner loader into the loading screen
+- used couple of flutter famous packages
+...
