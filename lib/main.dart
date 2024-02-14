@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutterprojects/pages/choose_location.dart';
+import 'package:flutterprojects/pages/loading.dart';
 import './pages/home.dart';
 // that widget will allow us to use google material design features, its a wrapper [the root] of the rest of our widgets inside the app
 void main() => runApp(MaterialApp(
   // to determine what s gonna displayed on the homescreen for our app
-  home: Home()
+ // home: Home(),
+  // this is gonna be a map
+  initialRoute: '/home',
+  routes: {
+    // the context keep track of our position in the widget tree
+    '/' : (context) => Loading(),
+    '/home' : (context) => Home(),
+    '/locations' : (context) => ChooseLocation(),
+  },
 ));
 
 

@@ -13,6 +13,6 @@ class _LoadingState extends State<Loading> {
     return Scaffold(
       body: 
       Text('Loading screen'),
-    )
+    );
   }
 }
