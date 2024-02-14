@@ -12,10 +12,14 @@ class Loading extends StatefulWidget {
 class _LoadingState extends State<Loading> {
   
   void setUpWorldTime () async {
-    WorldTime instance = WorldTime(location: 'london', flag: 'london.png', url: 'Europe/London');
+    WorldTime instance = WorldTime(location: 'London', flag: 'london.png', url: 'Europe/London');
     await instance.getTime();
     // redirect to the homepage
-    Navigator.pushNamed(context, '/home');
+    Navigator.pushNamed(context, '/home', arguments: {
+      'location' : instance.location,
+      'flag': instance.flag,
+      'time': instance.time
+    });
   }
 
   //runs first when the state object is created
