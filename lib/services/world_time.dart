@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart';
 import 'dart:convert';
 import 'package:intl/intl.dart';
@@ -20,6 +21,7 @@ class WorldTime {
         String datetime = dataRetrieved['datetime'];
         String offset = dataRetrieved['utc_offset'].substring(1,3);
 
+        print(datetime);
         DateTime now = DateTime.parse(datetime);
         now.add(Duration(hours: int.parse(offset)));
 
