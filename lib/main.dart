@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'quote.dart';
+import './pages/home.dart';
 // that widget will allow us to use google material design features, its a wrapper [the root] of the rest of our widgets inside the app
 void main() => runApp(MaterialApp(
   // to determine what s gonna displayed on the homescreen for our app
@@ -7,6 +7,19 @@ void main() => runApp(MaterialApp(
 ));
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -17,7 +30,6 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   List<Quote> quotes = [
     Quote('the only excuse for making a useless thing is that one admires it intensely', 'Oscar Wilde'),
-    Quote( 'I have simply worshipped pianists -- 2 at a time', 'Oscar Wilde'),
     Quote('A grande passion is the privilege of people who have nothing to do', 'Oscar Wilde')
 
   ];
@@ -81,7 +93,7 @@ class QuoteCard extends StatelessWidget {
 
 
 
-/*
+
 class Home extends StatefulWidget {
   const Home({super.key});
 
