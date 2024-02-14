@@ -8,6 +8,15 @@ class ChooseLocation extends StatefulWidget {
 }
 
 class _ChooseLocationState extends State<ChooseLocation> {
+
+  int counter = 0;
+  //runs first when the state object is created
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +28,15 @@ class _ChooseLocationState extends State<ChooseLocation> {
         elevation: 0,
       ),
       body: 
-      Text('choose location screen'),
+      ElevatedButton(
+          onPressed: () {
+            setState(() {
+              counter += 1;
+            });
+          },
+          child: Text(
+            'counter is $counter'
+          )),
     );
   }
 }
