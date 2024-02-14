@@ -7,7 +7,7 @@ void main() => runApp(MaterialApp(
   // to determine what s gonna displayed on the homescreen for our app
  // home: Home(),
   // this is gonna be a map
-  initialRoute: '/home',
+  initialRoute: '/',
   routes: {
     // the context keep track of our position in the widget tree
     '/' : (context) => Loading(),
